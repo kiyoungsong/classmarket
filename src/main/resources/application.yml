@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: classmarket
+  profiles:
+    active: local
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    url: jdbc:postgresql://localhost:5432/classmarket
+    username: classmarket
+    password: classmarket
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true

@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:18
+    container_name: classmarket-db
+    environment:
+      POSTGRES_DB: classmarket
+      POSTGRES_USER: classmarket
+      POSTGRES_PASSWORD: classmarket
+      TZ: Asia/Seoul
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql
+
+volumes:
+  pgdata:
